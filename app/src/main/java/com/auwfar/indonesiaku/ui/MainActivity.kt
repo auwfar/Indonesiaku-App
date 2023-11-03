@@ -1,14 +1,18 @@
-package com.auwfar.indonesiaku
+package com.auwfar.indonesiaku.ui
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.auwfar.indonesiaku.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

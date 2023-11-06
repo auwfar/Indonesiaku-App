@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_open"
+    <ProgressBar
+        android:id="@+id/pb_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open The World!"
+        android:indeterminateTint="#104A4B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_provinces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingVertical="16dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_province" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

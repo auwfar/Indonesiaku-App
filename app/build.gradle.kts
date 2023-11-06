@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -55,13 +57,16 @@ dependencies {
 
     // Dependency Injection
     implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
 
     // Network
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Image Loader
-    implementation("com.github.bumptech.glide:glide:4.15.1")
+    implementation("io.coil-kt:coil-bom:2.5.0")
+    implementation("io.coil-kt:coil")
+    implementation("io.coil-kt:coil-svg")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

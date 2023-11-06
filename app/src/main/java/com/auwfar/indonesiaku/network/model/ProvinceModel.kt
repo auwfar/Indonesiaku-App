@@ -1,5 +1,6 @@
 package com.auwfar.indonesiaku.network.model
 
+import android.net.Uri
 import com.google.gson.annotations.SerializedName
 
 data class ProvinceModel(
@@ -17,4 +18,8 @@ data class ProvinceModel(
     val logoUrl: String?,
     @SerializedName("lat_long")
     val latLong: String?,
-)
+) {
+    fun getMapsUri(): Uri {
+        return Uri.parse("geo:$latLong?q=" + Uri.encode(name))
+    }
+}

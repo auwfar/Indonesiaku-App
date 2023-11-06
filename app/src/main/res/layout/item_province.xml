@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_placeholder_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Aceh" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        app:layout_constraintEnd_toEndOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        tools:text="JL. T. Nyak Arief No.219, Banda Aceh (23114)" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="iv_logo,tv_address" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier_logo"
+        tools:text="T: (0651)-7551377 F: (0651)-7552307, 7555516, 7555518, 7553048" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone"
+        tools:text="humas@acehprov.go.id" />
+
+    <TextView
+        android:id="@+id/tv_website"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_web"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
+        tools:text="www.acehprov.go.id" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#104A4B"
+        android:fontFamily="@font/inter_medium"
+        android:text="Check Location"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_website" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
